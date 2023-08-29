@@ -1,0 +1,23 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/stock_example
+    username: sa
+    password:
+    driver-class-name: org.postgresql.Driver
+#Sql log
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
